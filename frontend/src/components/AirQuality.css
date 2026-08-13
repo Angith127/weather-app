@@ -1,0 +1,102 @@
+.air-quality {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.dark .air-quality {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.air-quality h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.dark .air-quality h3 {
+  color: #e0e0e0;
+}
+
+.aqi-card {
+  border-left: 5px solid #2ecc71;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dark .aqi-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+
+.aqi-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.aqi-label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.dark .aqi-label {
+  color: #e0e0e0;
+}
+
+.pollutants {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.pollutant {
+  background: rgba(102, 126, 234, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.dark .pollutant {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pollutant:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
+}
+
+.pollutant span {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.dark .pollutant span {
+  color: #aaa;
+}
+
+.pollutant p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.dark .pollutant p {
+  color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .pollutants {
+    grid-template-columns: 1fr;
+  }
+}

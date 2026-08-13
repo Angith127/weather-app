@@ -1,0 +1,96 @@
+@import '../variables.css';
+
+.comfort-index {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  padding: 28px 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 18px 40px rgba(20, 18, 55, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dark .comfort-index {
+  background: rgba(18, 22, 38, 0.56);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-light-mode);
+}
+
+.comfort-index h3 {
+  margin: 0 0 20px;
+  font-size: clamp(1.7rem, 2vw, 2.3rem);
+  color: #1d2330;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.dark .comfort-index h3 {
+  color: #eef3ff;
+}
+
+.comfort-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.comfort-card {
+  background: linear-gradient(135deg, rgba(103, 124, 242, 0.08), rgba(122, 98, 196, 0.04));
+  border: 1px solid rgba(117, 131, 210, 0.12);
+  border-radius: 22px;
+  padding: 24px 18px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comfort-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(67, 78, 128, 0.1);
+}
+
+.dark .comfort-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.comfort-icon {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.comfort-label {
+  margin: 0 0 10px;
+  font-size: 0.74rem;
+  color: #6a7087;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+}
+
+.dark .comfort-label {
+  color: #c9d5f6;
+}
+
+.comfort-value {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 2vw, 2.7rem);
+  font-weight: 800;
+  color: #ff6d5e;
+  letter-spacing: -0.06em;
+}
+
+.comfort-description {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6d7286;
+}
+
+.dark .comfort-description {
+  color: #d2dcf8;
+}
+
+@media (max-width: 600px) {
+  .comfort-grid {
+    grid-template-columns: 1fr;
+  }
+}

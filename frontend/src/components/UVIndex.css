@@ -1,0 +1,134 @@
+@import '../variables.css';
+
+.uv-index {
+  margin-bottom: var(--spacing-xl);
+}
+
+.uv-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  border-left: 5px solid;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+}
+
+.dark .uv-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light-mode);
+}
+
+.uv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.uv-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.uv-icon {
+  font-size: 1.8rem;
+}
+
+.uv-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.dark .uv-header h3 {
+  color: var(--text-light-mode);
+}
+
+.uv-value {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.uv-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.uv-level {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.dark .uv-level {
+  color: var(--text-light);
+}
+
+.uv-bar {
+  height: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.dark .uv-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.uv-fill {
+  height: 100%;
+  transition: width 0.6s ease-out;
+  border-radius: var(--radius-full);
+}
+
+.uv-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.dark .uv-scale {
+  color: #7a7a7a;
+}
+
+.uv-advice {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.advice-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.uv-advice p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.dark .uv-advice p {
+  color: var(--text-light-mode);
+}
+
+@media (max-width: 600px) {
+  .uv-card {
+    padding: var(--spacing-md);
+  }
+
+  .uv-number {
+    font-size: 2.2rem;
+  }
+}

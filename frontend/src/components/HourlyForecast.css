@@ -1,0 +1,118 @@
+.hourly-forecast {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  padding: 26px 22px 18px;
+  margin-bottom: 28px;
+  box-shadow: 0 18px 40px rgba(20, 18, 55, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dark .hourly-forecast {
+  background: rgba(18, 22, 38, 0.56);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #eaf0ff;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hourly-forecast h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
+  color: #1d2330;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.dark .hourly-forecast h3 {
+  color: #eef3ff;
+}
+
+.trend-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #5f6d8d;
+}
+
+.dark .trend-label {
+  color: #c7d5f7;
+}
+
+.hourly-chart-wrap {
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, rgba(103, 124, 242, 0.14), rgba(122, 98, 196, 0.1));
+  border-radius: 18px;
+  padding: 12px 12px 4px;
+}
+
+.hourly-chart {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+
+.hourly-container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(70px, 1fr));
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.hourly-card {
+  background: linear-gradient(135deg, #6f83f7 0%, #7d5eb8 100%);
+  border-radius: 16px;
+  padding: 12px 10px;
+  text-align: center;
+  color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-width: 70px;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.18);
+}
+
+.hourly-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 26px rgba(102, 126, 234, 0.25);
+}
+
+.hourly-card .time {
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.92;
+  margin-bottom: 6px;
+}
+
+.hourly-card img {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto;
+}
+
+.hourly-card .temp {
+  font-size: 1.08rem;
+  font-weight: 800;
+  margin: 5px 0 4px;
+}
+
+.hourly-card .pop {
+  font-size: 0.73rem;
+  opacity: 0.82;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .hourly-container {
+    grid-template-columns: repeat(12, minmax(72px, 1fr));
+  }
+
+  .hourly-card {
+    min-width: 72px;
+  }
+}

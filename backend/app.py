@@ -20,8 +20,12 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-key')
 
 # Initialize database
-from models import db
-db.init_app(app)
+try:
+    from models import db
+    db.init_app(app)
+except ImportError:
+    print("PostgreSQL not available - running without database")
+    db = None
 
 # Import and register blueprints
 from routes.weather_routes import bp as weather_bp
@@ -63,10 +67,11 @@ def index():
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()
+        if db is not None:
+          db.create_all()
     
     app.run(
-        debug=os.getenv('DEBUG', True),
-        host='0.0.0.0',
-        port=5000
+    debug=os.getenv('DEBUG', True),
+    host='127.0.0.1',
+    port=8001
     )
